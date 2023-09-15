@@ -42,22 +42,25 @@ public class Main {
                 System.out.println(id + " " + firstName);
 
             }
-
             st.close();
             rs.close();
             con.close();
 
             System.out.println(con);
-
-
-
-
-
         }catch(SQLException e){
-            System.out.println(e);
             e.printStackTrace();
         }
 
-
     }
 }
+/**
+ * 1. Import the packages (java.sql.*)
+ * 2. a. Load the driver
+ * 2. b. Register the driver
+ * 3. Establish the connection using DriverManager.getConnection()
+ * 4. Create the statement using connection.createStatement()
+ * 5. Execute the query using statement.executeQuery() or statement.executeUpdate(); takes sql string params
+ * 6. Process the result (ResultSet in case of query)
+ * 7. Close the connection
+ * */
+
